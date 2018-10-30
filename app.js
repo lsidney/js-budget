@@ -249,6 +249,9 @@ var UIController = (function(){
         
         updatePercentages: function(percentages){
             
+            console.log('---------');
+            console.log(percentages);
+            
             var fields = document.querySelectorAll(DOMStrings.expPercentageLabel);
             
             nodeListForEach(fields, function(cur, idx){
@@ -340,10 +343,9 @@ var Controller = (function(budgetCtrl, UICtrl){
         
         budgetCtrl.calcPercentage();
         
-        var percentage = budgetCtrl.getBudget();
+        var percentage = budgetCtrl.getPercentage();
         
-        UICtrl.updatePercentages(percentage);
-        
+        UICtrl.updatePercentages(percentage);        
     }
     
     var crtlAddItem = function(){
