@@ -248,10 +248,7 @@ var UIController = (function(){
         },
         
         updatePercentages: function(percentages){
-            
-            console.log('---------');
-            console.log(percentages);
-            
+    
             var fields = document.querySelectorAll(DOMStrings.expPercentageLabel);
             
             nodeListForEach(fields, function(cur, idx){
